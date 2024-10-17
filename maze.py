@@ -20,13 +20,15 @@ class StackFrontier:
             return node
 class Maze:
     def __init__(self):
-        with open(Untilted-1) as f:
+        with open("maze.txt") as f:
             contents = f.read()
         if contents.count("A") != 1:
             raise Exception("Problem with A")
         if contents.count("B") != 1:
             raise Exception("Problem with B")
         
-        
+        contents = contents.splitlines()
+        self.height = len(contents)
+        self.weight = max(len(line) for line in contents)
 
 node = Node()
